@@ -31,13 +31,13 @@ export class HomePage {
     this.navCtrl.setRoot(ListPage);
   }
 
-  ionViewCanEnter() { // Boolean, Promise<Boolean>
-    let account = this.navParams.get('account');
-    let password = this.navParams.get('password');
-    console.log(account);
-    console.log(password);
-    return account == '1234' && password == '1234';
-  }
+  // ionViewCanEnter() { // Boolean, Promise<Boolean>
+  //   let account = this.navParams.get('account');
+  //   let password = this.navParams.get('password');
+  //   console.log(account);
+  //   console.log(password);
+  //   return account == '1234' && password == '1234';
+  // }
 
 
 }

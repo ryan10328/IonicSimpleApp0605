@@ -1,3 +1,4 @@
+import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
 import { HelloPage } from './../pages/hello/hello';
 import { Component, ViewChild } from '@angular/core';
@@ -13,9 +14,9 @@ import { ListPage } from '../pages/list/list';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = LoginPage;
+  // rootPage: any = LoginPage;
 
-  // rootPage: any = HomePage;
+  rootPage: any = HomePage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -26,7 +27,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Hello', component: HelloPage }
+      { title: 'Hello', component: HelloPage },
+      { title: 'Check', component: CheckPage }
     ];
 
   }
