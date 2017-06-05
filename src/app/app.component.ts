@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { HelloPage } from './../pages/hello/hello';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -12,8 +13,9 @@ import { ListPage } from '../pages/list/list';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
+  rootPage: any = LoginPage;
 
-  rootPage: any = HomePage;
+  // rootPage: any = HomePage;
 
   pages: Array<{ title: string, component: any }>;
 
