@@ -1,3 +1,4 @@
+import { StudentPage } from './../pages/student/student';
 import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
@@ -13,6 +14,9 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormsModule } from "@angular/forms";
+import { HttpModule } from '@angular/http';
+
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,14 @@ import { FormsModule } from "@angular/forms";
     HelloPage,
     MasterPage,
     LoginPage,
-    CheckPage
+    CheckPage,
+    StudentPage
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp, {}, {
       links: [
         { component: HomePage, name: 'Home', segment: 'home123' },
@@ -42,7 +49,8 @@ import { FormsModule } from "@angular/forms";
     HelloPage,
     MasterPage,
     LoginPage,
-    CheckPage
+    CheckPage,
+    StudentPage
   ],
   providers: [
     StatusBar,
