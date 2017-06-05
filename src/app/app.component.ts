@@ -1,3 +1,4 @@
+import { BarcodePage } from './../pages/barcode/barcode';
 import { StudentPage } from './../pages/student/student';
 import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
@@ -29,7 +30,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Hello', component: HelloPage },
       { title: 'Check', component: CheckPage },
-      { title: 'Student', component: StudentPage }
+      { title: 'Student', component: StudentPage },
+      { title: 'Barcode', component: BarcodePage }
     ];
 
   }

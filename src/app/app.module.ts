@@ -1,3 +1,4 @@
+import { BarcodePage } from './../pages/barcode/barcode';
 import { StudentPage } from './../pages/student/student';
 import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
@@ -18,6 +19,8 @@ import { HttpModule } from '@angular/http';
 
 import { IonicStorageModule } from '@ionic/storage';
 
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +30,8 @@ import { IonicStorageModule } from '@ionic/storage';
     MasterPage,
     LoginPage,
     CheckPage,
-    StudentPage
+    StudentPage,
+    BarcodePage
   ],
   imports: [
     BrowserModule,
@@ -50,11 +54,13 @@ import { IonicStorageModule } from '@ionic/storage';
     MasterPage,
     LoginPage,
     CheckPage,
-    StudentPage
+    StudentPage,
+    BarcodePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
