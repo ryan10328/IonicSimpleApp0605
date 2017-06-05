@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { NgForm } from "@angular/forms";
 
 /**
@@ -17,7 +17,9 @@ export class CheckPage {
 
   @ViewChild('f') frm: NgForm;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -29,7 +31,15 @@ export class CheckPage {
   }
 
   ionViewCanLeave() {
-    return this.frm.valid;
+    if (!this.frm.valid) {
+      let alert = this.alertCtrl.create({
+        title: 'Warning',
+        message: '所有欄位皆為必填'
+      });
+      alert.present();
+      return false;
+    }
+    return true;
   }
 
 }
