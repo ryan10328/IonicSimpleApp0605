@@ -14,6 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HelloPage {
 
+  students: any[] = [{
+    name: 'Ryan'
+  },
+  {
+    name: 'Jeff'
+  }];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
