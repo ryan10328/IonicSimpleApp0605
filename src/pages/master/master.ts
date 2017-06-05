@@ -21,4 +21,8 @@ export class MasterPage {
     console.log('ionViewDidLoad MasterPage');
   }
 
+  goHome() {
+    this.navCtrl.pop();
+  }
+
 }

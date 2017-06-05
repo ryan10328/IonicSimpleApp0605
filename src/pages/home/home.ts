@@ -1,3 +1,4 @@
+import { ListPage } from './../list/list';
 import { MasterPage } from './../master/master';
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
@@ -23,5 +24,9 @@ export class HomePage {
 
   goMaster() {
     this.navCtrl.push(MasterPage);
+  }
+
+  setRootPage() {
+    this.navCtrl.setRoot(ListPage);
   }
 }
