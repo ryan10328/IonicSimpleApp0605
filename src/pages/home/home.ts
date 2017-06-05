@@ -1,3 +1,4 @@
+import { MasterPage } from './../master/master';
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
@@ -20,4 +21,7 @@ export class HomePage {
     alert.present();
   }
 
+  goMaster() {
+    this.navCtrl.push(MasterPage);
+  }
 }
